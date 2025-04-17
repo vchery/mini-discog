@@ -17,9 +17,9 @@ def artist():
 def albums():
     return render_template('albums.html', albums = db.show_details())
 
-@app.route('/album/<int:album_id>')
+@app.route('/albums/<album_id>')
 def album(album_id):
-    return db.show_details()[album_id] == 813
+    return db.album_details(album_id)
 
 if __name__ == '__main__':
     app.run()

@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5"/>
-    <title>Artist</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/music_library.png') }}">
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     <main class="container-fluid">
         <img src="/static/images/yours_truly.jpg" alt="Yours Truly" width="350" height="350">
         <a href="/albums">
@@ -15,5 +7,4 @@
         </a>
         <img src="/static/images/dangerous_woman.jpg" alt="Dangerous Woman" width="350" height="350">
     </main>
-</body>
-</html>
+{% endblock content %}

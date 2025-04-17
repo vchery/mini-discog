@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5"/>
-    <title>Home Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/music_library.png') }}">
-</head>
-<body>
-    <main class="container-fluid">
+{% extends "base.html" %}
+{% block content %}
+    <header class="container">
+        <h2>mini discog</h2>
+        <p>an artist's music catalog</p>
+    </header>
+
+    <main class="container">
+        <section id="artist-details">
+            <h3>Ariana Grande</h3>
+            <p>Born: June 26, 1993</p>
+            <p>Years active: 2008 - Present</p>
+            <p>Genres: Pop, R&B</p>
+        </section>
         <a href="/artist">
             <img src="/static/images/ariana_grande.jpg" alt="Ariana Grande" width="500" height="500">
         </a>
+
     </main>
-</body>
-</html>
+{% endblock content %}

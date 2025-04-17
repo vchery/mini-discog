@@ -13,6 +13,13 @@ def start_connect():
 def show_details():
     conn = start_connect()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM ariana_grande')
+    cursor.execute("SELECT * FROM ariana_grande")
     discography = cursor.fetchall()
     return discography
+
+def album_details(album_id):
+    conn = start_connect()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM ariana_grande WHERE album_id = (%s)", [album_id])
+    albums = cursor.fetchall()
+    return albums

@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Albums</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <h3>My Everything (Standard Edition)</h3>
-    {% for album in albums %}
-        {% if album[2] == "My Everything" %}
-        <p>{{ album[1] }}</p>
-        {% endif %}
-    {% endfor %}
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <p>hello world</p>
+{% endblock content %}
